@@ -1,5 +1,4 @@
 img/*.docx
-google_scrape/models/google5/*
 *.tmp
 
 # Byte-compiled / optimized / DLL files
