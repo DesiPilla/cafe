@@ -1,5 +1,4 @@
 img/*.docx
-google_scrape/models/google3/*
 google_scrape/models/google4/*
 google_scrape/models/google5/*
 *.tmp
