@@ -93,3 +93,6 @@ Five distinct models were trained and compared, each with different architecture
 
 # Results
 The five model architectures outlined in Section 2.3 were trained and evaluated on several criteria, including their ROC curves, *sip* score distributions, accuracies, precision, recall, variability, racial bias, and interpretability. Model training took between 30 min and 90 min for each architecture, which was carried out on an Nvidia Tesla K80 GPU.
+
+## Training
+Figure 3 shows the loss curves on the training and validation sets during fine-tuning. For all models, the validation loss did not improve—seemingly, it got larger—while the training loss decreased. This indicates serious underfitting. Despite this, most models were able to achieve 74% – 76% accuracy on the validation set (Table 3), which outperforms a random guess. Once trained, the threshold used for classification was adjusted to maximize the true-positive rate while maintaining a low false-positive rate. This was done by subjectively evaluating the ROC curve for each model. The threshold for *sip* scores was lowered to 0.28 – 0.46, depending on the model.
