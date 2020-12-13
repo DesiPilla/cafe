@@ -46,7 +46,8 @@ After labeling these images, the resulting dataset contained a far larger number
 ### Data augmentation / preprocessing
 The images were displayed to the author without any augmentation or processing applied; the full, original image was classified as either sip or skip. Once labeled, the image was cropped to include only the face of the subject, identified using MTCNN [33] as implemented by Brownlee (2019) [4]. The cropped image is a different shape for each image, which is not appropriate for inputs to a neural network. As a workaround, the larger dimension was resized to 256 pixels, and the smaller dimension was scaled such that the aspect ratio was maintained. The smaller dimension was then padded with black pixels on both sides to a size of 256. The result was a 256x256 pixel image. A subset of the cropped images is displayed in Figure 1.
 
-[ INSERT FIGURE 1 ]
+![Example images scraped from Google Images](img/google_scrape_examples.jpg)
+*Figure 1: Example images scraped from Google Images. This display is after photos have been cropped and padded.*
 
 When preparing training batches, the standard preprocessing for the VGG network was applied to all images [26]. This includes converting all images from RGB to BGR and zero-centering each color channel with respect to the ImageNet dataset (without scaling). Only one of the models (google1) did not apply this preprocessing when training.
 
