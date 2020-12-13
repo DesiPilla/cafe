@@ -119,4 +119,8 @@ The models were then compared to one another by their variability results on the
 
  [ INSERT FIGURE 4 ]
 
+ ## Model explainability
+ As shown in Figure 5a, the four models that applied preprocessing to images are influenced by many of the same pixels in an image, though the actual predictions vary. The google1 model did not apply preprocessing, and thus appears to focus more deeply on certain areas than others. In Figure 5b, the predictions and LRP [1] results from the google3 model across five different images of the same person are displayed. This gives a sense of the variability in predictions for an individual, and how the model “sees” them in each image. 
+
+ [ INSERT FIGUER 5 ]
  
