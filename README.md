@@ -87,7 +87,7 @@ However, we do not need to classify 1,000 objects; we only want to distinguish b
 The training methodology follows popular techniques for transfer learning [2, 20]. There are two parts to model training: initialization and fine-tuning. In the initialization step, the weights of the pretrained VGG layers are frozen and not updated. The model is trained for a small number of epochs to generate *learned* values for the fresh layer weights as opposed to completely random values. In the fine-tuning step, the last set of the convolutional layers in the pretrained VGG network are unfrozen. This allows the model to home in on features that are more specific to our task. Fine-tuning is conducted over a longer period, with *early stopping* criteria defining how many epochs to use. During both steps, the optimizer used was SGD (*learning rate*=0.0001 and *momentum*=0.9). We chose to use a batch size of 32 for training, as smaller batch sizes have been found to boast better performances on the VGG16 network [11]. 
 
 ![The fully connected layers of VGG16 are stripped and replaced with new, trainable layers that we specify](img/vgg16-added.jpg)
-Figure 2: The fully connected layers of VGG16 are stripped and replaced with new, trainable layers that we specify.
+*Figure 2: The fully connected layers of VGG16 are stripped and replaced with new, trainable layers that we specify.*
 
 Five distinct models were trained and compared, each with different architectures (see Table 2) for their fresh layers. All models included
   * layer to flatten the final set of features from VGG
@@ -96,7 +96,7 @@ Five distinct models were trained and compared, each with different architecture
   * a fully connected layer at the end with 2 outputs and a “softmax” activation function  
 
 ![Five different architectures were trained and later evaluated](img/architectures.jpg)
-Table 2: Here are the architectures of the fresh layers appended to VGG16. Five different architectures were trained and later evaluated.
+*Table 2: Here are the architectures of the fresh layers appended to VGG16. Five different architectures were trained and later evaluated.*
 
 
 # Results
@@ -106,7 +106,7 @@ The five model architectures outlined in Section 2.3 were trained and evaluated 
 Figure 3 shows the loss curves on the training and validation sets during fine-tuning. For all models, the validation loss did not improve—seemingly, it got larger—while the training loss decreased. This indicates serious underfitting. Despite this, most models were able to achieve 74% – 76% accuracy on the validation set (Table 3), which outperforms a random guess. Once trained, the threshold used for classification was adjusted to maximize the true-positive rate while maintaining a low false-positive rate. This was done by subjectively evaluating the ROC curve for each model. The threshold for *sip* scores was lowered to 0.28 – 0.46, depending on the model.
 
 ![Loss curves for fine-tuned models](img/loss_curves.jpg)
-Figure 3: Loss curves for fine-tuned models
+*Figure 3: Loss curves for fine-tuned models*
 
 
 ## Model comparison
@@ -117,21 +117,21 @@ However, the precision metric is also quite useful. *Precision* refers to the po
 Precision is balanced by *recall*, a metric that measures what percentage of all *sip* images were correctly classified. Four of the five models were able to achieve a recall of at least 87% on the validation set, with the google4 model obtaining the best result.
 
 ![Model performance on the validation set of scraped images](img/model_comparison_results.jpg)
-Table 3: Model performance on the validation set of scraped images
+*Table 3: Model performance on the validation set of scraped images*
 
 The models were then compared to one another by their variability results on the *friends* dataset explained in Section 2.2. Table 4 shows the average score for each model on the 14 sets of images that are intended to simulate real dating profiles. The google2 model had the lowest standard deviation and range for its predictions on each set of five images. The google3 model had slightly higher values for both metrics. The *purity* metric is the average percentage of images that had the same predicted label in each set of images. A purity of 60% means that three of the five images received the same label, 80% means four had the same label, and so on. Four of the five models were able to achieve purities of at least 80%, which indicates only one image differed from the rest.
 
 ![Variability metrics on the friends dataset](img/model_comparison_variability.jpg)
-Table 4: Variability metrics on the friends dataset
+*Table 4: Variability metrics on the friends dataset*
 
- The score predictions on the validation set used the full range of 0% to 100% on all models. On the subset of minority women, the models all also used the full range of scores, though heavily skewed towards 0%; this indicates that while women of color received lower scores (which is in line with the labels given by the author), not all women of color were labeled *skip* by the models simply because of their race. In fact, only 53% to 67% of all minority women were predicted as *skip*, while 80% of the images were labeled *skip* by the author. This suggests the models were not as accurate at predicting women of color, but also that they were not biased against them.
+The score predictions on the validation set used the full range of 0% to 100% on all models. On the subset of minority women, the models all also used the full range of scores, though heavily skewed towards 0%; this indicates that while women of color received lower scores (which is in line with the labels given by the author), not all women of color were labeled *skip* by the models simply because of their race. In fact, only 53% to 67% of all minority women were predicted as *skip*, while 80% of the images were labeled *skip* by the author. This suggests the models were not as accurate at predicting women of color, but also that they were not biased against them.
 
- ![Predicted sip scores vs actual labels for a subset of validation images](img/google_scrape_results.jpg)
-Figure 4: Predicted sip scores vs actual labels for a subset of validation images. Predicted values were computed by the google3 model.
+![Predicted sip scores vs actual labels for a subset of validation images](img/google_scrape_results.jpg)
+*Figure 4: Predicted sip scores vs actual labels for a subset of validation images. Predicted values were computed by the google3 model.*
 
 
- ## Model explainability
- As shown in Figure 5a, the four models that applied preprocessing to images are influenced by many of the same pixels in an image, though the actual predictions vary. The google1 model did not apply preprocessing, and thus appears to focus more deeply on certain areas than others. In Figure 5b, the predictions and LRP [1] results from the google3 model across five different images of the same person are displayed. This gives a sense of the variability in predictions for an individual, and how the model “sees” them in each image. 
+## Model explainability
+As shown in Figure 5a, the four models that applied preprocessing to images are influenced by many of the same pixels in an image, though the actual predictions vary. The google1 model did not apply preprocessing, and thus appears to focus more deeply on certain areas than others. In Figure 5b, the predictions and LRP [1] results from the google3 model across five different images of the same person are displayed. This gives a sense of the variability in predictions for an individual, and how the model “sees” them in each image. 
 
 ![LRP results](img/lrp_results.jpg)
 
