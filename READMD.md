@@ -123,4 +123,9 @@ The models were then compared to one another by their variability results on the
  As shown in Figure 5a, the four models that applied preprocessing to images are influenced by many of the same pixels in an image, though the actual predictions vary. The google1 model did not apply preprocessing, and thus appears to focus more deeply on certain areas than others. In Figure 5b, the predictions and LRP [1] results from the google3 model across five different images of the same person are displayed. This gives a sense of the variability in predictions for an individual, and how the model “sees” them in each image. 
 
  [ INSERT FIGUER 5 ]
- 
+
+
+## Shortcomings
+While exploring viable architectures, some difficulties were experienced. When using fewer training images (originally, before scraping more in the data acquisition step), the model results were not distinguishing any features and would revert to labeling all images as a single class, thus obtaining a 50% accuracy. At the time, this was believed to have stemmed from few training observations, but may have been attributable to improper training techniques. The training missteps were later remedied, yet by this point more training images had already been obtained and no models were re-run on the original dataset.
+
+Additionally, deeper networks were not found to add any predictive power to models. Architectures with three or more fully connected layers did not use the full range of scores (0% to 100%) when making predictions. This is problematic, and thus only architectures with two or less dense layers were included.
