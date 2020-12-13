@@ -89,3 +89,7 @@ Five distinct models were trained and compared, each with different architecture
   * at least one fully connected layer (with between 128 and 1096 neurons) using “ReLu” as the activation function
   * dropout (with probability of 0.3 or 0.5)
   * a fully connected layer at the end with 2 outputs and a “softmax” activation function  
+
+
+# Results
+The five model architectures outlined in Section 2.3 were trained and evaluated on several criteria, including their ROC curves, *sip* score distributions, accuracies, precision, recall, variability, racial bias, and interpretability. Model training took between 30 min and 90 min for each architecture, which was carried out on an Nvidia Tesla K80 GPU.
