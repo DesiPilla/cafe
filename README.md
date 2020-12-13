@@ -57,7 +57,8 @@ To increase the number of training images available, transformations were also a
 ### Data summary
 The final dataset contains 1,040 images (520 of each class). Table 1 shows the composition of this dataset based on the query terms entered into Google Search.
 
-[ INSERT TABLE ]
+![Breakdown of the scraped images dataset by search term](img/google_scrape_breakdown.jpg)
+*Table 1: Breakdown of the scraped images dataset by search term.*
 
 Notably, 23.07% of the total images are exclusively of minority women. This value is actually higher, as the search terms, “young woman”, “young woman beautiful”, and “young woman Instagram” may contain minorities as well. Generally, though, those groups were of mostly white women. 
 
