@@ -33,3 +33,6 @@ To uncover the mystery behind how neural networks arrive at their outputs, Layer
 
 ## Methods and data
 The example task is to predict whether the author, a 20-year-old white male, would classify a photo of a woman to be pretty or not. The profiles this type of user would be exposed to include women between the ages of 18 and 25 (approximately) of all races, with perhaps a larger proportion of white women than other ethnicities.
+
+## Google Images data
+The first set of data used in this study was a collection of 1,040 representative images of young women that were scraped from Google. These images were used to train a model to predict preferences for potential partners. 
