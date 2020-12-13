@@ -61,3 +61,12 @@ The final dataset contains 1,040 images (520 of each class). Table 1 shows the c
 Notably, 23.07% of the total images are exclusively of minority women. This value is actually higher, as the search terms, “young woman”, “young woman beautiful”, and “young woman Instagram” may contain minorities as well. Generally, though, those groups were of mostly white women. 
 
 The data was separated into a training and validation set by a random 80-20 split. 
+
+
+### Data limitations
+There is a significant gap in the proportion of minorities represented in the different classes. Minority women comprised 36.73% of all skip images, but only 9.42% of the *sip* images. This difference is nearly four-fold. It is important to note that this disparity may bias the inherent attractiveness of women of color, though any partiality will be inherently correlated with the preference of the author.
+
+Furthermore, the training set was composed of images that would best represent the potential partners for a 20-year-old white male. Any results obtained using this dataset may not carry over to images containing men, older demographics, or more racially diverse groups.
+
+Additionally, the images contain padded walls to ensure all images are the same shape. While this preserves the original proportions of the face, it introduces unrelated features that may be learned by a model. The paddings do not inherently add physical attractiveness to a person.
+Lastly, a large bias was introduced by the way training images were labeled. To best simulate the environment of a dating app, the author was shown full, original images one-by-one and asked to classify each as either *sip* (like) or *skip* (dislike). The labels referred to the physical attractiveness of the entire image, with the assumption that an attractive person exhibits an attractive face. This premise is not entirely veristic, as there are other, non-facial features (body shape, clothing, pose, etc.) visible in the unaltered images that may have contributed to the evaluation of their attractiveness. While focusing on the face provides a convenient way to isolate the subject, it must be noted that the data has built-in inaccuracies to consider.
