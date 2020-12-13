@@ -11,7 +11,7 @@ The efficacy of such apps for finding a long-term partner has been questioned by
 Researchers have found that physical attractiveness is often the most important contributor when forming an impression of a potential partner [19]. However, Kniffin and Wilson (2004) found that non-physical features that were learned only after interacting with others played a significant role in one’s attractiveness; a person’s initial assessment of someone’s physical attractiveness was different after obtaining further impressions through group activities. On dating apps, however, these personality traits are largely unavailable, save for self-reported characteristics in one’s bio. As evidenced by Levy et al. (2019), most swiping decisions are made in just enough time to process a user’s physical appearance.
 
 
-## Motivation and problem statement
+### Motivation and problem statement
 With the number of online singles growing, a person can get lost viewing profiles for many hours, never finding a single match. Waiting for your profile to be shown to others (and liked) can take time as well. On Tinder, a user can even be shown profiles they have already disliked as the pool of unviewed profiles dries up [27]. It has also been claimed that Tinder displays users that have already swiped left on you, in which case swiping on those profiles are meaningless. By increasing the volume and availability of prospective partners, these apps have also added an unintended inefficiency to this process. These undesirable app features, however, may be aimed more at maintaining a user base and following a business model than at efficient matchmaking.
 
 To reduce wasted time, we propose using Deep Learning and transfer learning methods to automatically classify profiles for a given user. By training a personal algorithm, all matching would be done instantly (or in the required computational time to predict all profiles in the user-base) upon signing up for the service. Similar business models have been seen in social media apps such as Facebook, Instagram, and Twitter. Most recently, TikTok has exploited a prediction-based AI recommendation system for content feeds to foster substantial user-engagement rates. This is a large reason the average user spends 52 minutes per day on the app and the value of their parent company, ByteDance, grew to $75 million in November 2018 [7]. 
@@ -19,7 +19,7 @@ To reduce wasted time, we propose using Deep Learning and transfer learning meth
 This study aims to provide a proof-of-concept for the idea and to define a model architecture that can be used generally to solve this task. Specifically, the model architecture was trained to predict physical attractiveness of a woman’s face according to the author’s personal preferences.
 
 
-## Related works
+### Related works
 
 Brozovsky and Petricek (2007) suggested collaborative filtering (CF) algorithms as an improvement on global algorithms [5]. These user-specific functions were better at producing a list of 10 profile recommendations for individuals that initially rated 150 profiles. Krzywicki et al. (2014) notes that standard profile matching algorithms are susceptible to “over-recommending” popular profiles [14]; this underscores the issue with a greedy approach used in certain online dating services. The study also found that including an additional rating system based on important user-specific features improved the success rate of real-life interactions.
 
