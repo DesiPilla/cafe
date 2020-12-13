@@ -154,3 +154,71 @@ Increasing the dataset might be a necessity for future applications of this mode
 Also of practical concern is the size of each model. The models evaluated in this study range from 144 MB to 386 MB in size, which is non-negligible. To scale up this methodology into a functional app with, ideally, thousands of users would require either significant storage and memory allocation or an improved memory-efficient design. Potential avenues to explore are utilizing knowledge distillation and quantization techniques.
 
 Lastly, a continuation of this study involving multiple individuals labeling training data and evaluating the resulting performances would provide critical information as to whether this method adequately solves the task at hand. This study only involved a single user, the author, labeling data. Furthermore, all images were of women roughly aged 18-25. Attempting to train the same model with different *sip* and *skip* labels, an older demographic, and on males would provide more conclusive evidence that the task can be solved with this technique.
+
+
+# References
+[1]	Atulshanbhag. “Layerwise-Relevance-Propagation.” GitHub, *GitHub*, 21 Aug. 2018, github.com/atulshanbhag/Layerwise-Relevance-Propagation.
+
+[2]	Babu, Pasupulati Rajesh. “Face Recognition Using Transfer Learning - Pasupulati Rajesh Babu.” *Medium*, 13 June 2020, medium.com/@p.rajeshbabu6666/face-recognition-using-transfer-learning-64de34de68a6.
+
+[3]	Bauman, Zygmunt. *Liquid Love: On the Frailty of Human Bonds*. 1st ed., Polity, 2003.
+
+[4]	Brownlee, Jason. “How to Perform Face Recognition With VGGFace2 in Keras.” *Machine Learning Mastery*, 24 Aug. 2020, machinelearningmastery.com/how-to-perform-face-recognition-with-vggface2-convolutional-neural-network-in-keras.
+
+[5]	Brozovsky, Lukas, and Vaclav Petricek. “Recommender System for Online Dating Service.” *Proceedings of Conference Znalosti*, 2017. arXiv.org, arxiv.org/abs/cs/0703042.
+
+[6]	Cao, Qiong, et al. “VGGFace2: A Dataset for Recognising Faces Across Pose and Age.” *CoRR*, 2018. arXiv.org, arxiv.org/abs/1710.08092.
+
+[7]	Davis, Jason P., et al. “ByteDance Beyond China: Leveraging Consumer Artificial Intelligence (AI) From Toutiao to Musical.Ly and TikTok.” *INSEAD*, 2019. Harvard Business Publishing, hbsp.harvard.edu/product/IN1587-PDF-ENG.
+
+[8]	He, Kaiming, et al. “Deep Residual Learning for Image Recognition.” *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*, 2016, pp. 770–78. arXiv.org, doi:10.1109/CVPR.2016.90.
+
+[9]	“Iris Dating | Date with Protection.” *Iris*, Ideal Match Inc., www.irisdating.com/. Accessed 10 Dec. 2020.
+
+[10]	Joel, Samantha, et al. “Is Romantic Desire Predictable? Machine Learning Applied to Initial Romantic Attraction.” *Psychological Science*, vol. 28, no. 10, 2017, pp. 1478–89. *Crossref*, doi:10.1177/0956797617714580.
+
+[11]	Kandel, Ibrahem, and Mauro Castelli. “The Effect of Batch Size on the Generalizability of the Convolutional Neural Networks on a Histopathology Dataset.” *ICT Express*, vol. 6, no. 4, 2020, pp. 312–15. *Crossref*, doi:10.1016/j.icte.2020.04.010.
+
+[12]	Kniffin, Kevin M., and David Sloan Wilson. “The Effect of Nonphysical Traits on the Perception of Physical Attractiveness.” *Evolution and Human Behavior*, vol. 25, no. 2, 2004, pp. 88–101. *Crossref*, doi:10.1016/s1090-5138(04)00006-6.
+
+[13]	Krizhevsky, Alex, et al. “ImageNet Classification With Deep Convolutional Neural Networks.” *Communications of the ACM*, vol. 60, no. 6, 2017, pp. 84–90. *Crossref*, doi:10.1145/3065386.
+
+[14]	Krzywicki, A., et al. “Collaborative Filtering for People-to-People Recommendation in Online Dating: Data Analysis and User Trial.” *International Journal of Human-Computer Studies*, vol. 76, 2015, pp. 50–66. *Crossref*, doi:10.1016/j.ijhcs.2014.12.003.
+
+[15]	Levy, Jon, et al. “Polar Similars: Using Massive Mobile Dating Data to Predict Synchronization and Similarity in Dating Preferences.” *Frontiers in Psychology*, vol. 10, 2019. *Crossref*, doi:10.3389/fpsyg.2019.02010.
+
+[16]	Lomas, Natasha. “Someone Scraped 40,000 Tinder Selfies to Make a Facial Dataset for AI Experiments.” *TechCrunch*, 28 Apr. 2017, tcrn.ch/2oUehj6.
+
+[17]	Ozbal, Gozde, and Kilal Karaman. “Matchbook a Web Based Recommendation System for Matchmaking.” *23rd International Symposium on Computer and Information Sciences*, 2008, pp. 1–6. IEEE Xplore, doi:10.1109/ISCIS.2008.4717869.
+
+[18]	Parkhi, Omkar M. “Deep Face Recognition.” *Proceedings of the British Machine Vision Conference (BMVC)*, 2015, www.bmva.org/bmvc/2015/papers/paper041/index.html.
+
+[19]	Riggio, Ronald E., et al. “Beauty Is More Than Skin Deep: Components of Attractiveness.” *Basic and Applied Social Psychology*, vol. 12, no. 4, 1991, pp. 423–39. *Crossref*, doi:10.1207/s15324834basp1204_4.
+
+[20]	Rosebrock, Adrian. “How to Create a Deep Learning Dataset Using Google Images.” *PyImageSearch*, 20 Apr. 2020, www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images.
+
+[21]	Rosebrock, Adrian. “Fine-Tuning with Keras and Deep Learning.” *PyImageSearch*, 11 June 2020, www.pyimagesearch.com/2019/06/03/fine-tuning-with-keras-and-deep-learning/.
+
+[22]	Samek, Wojciech, Thomas Wiegand, and Klaus Robert-Muller. “Explainable Artificial Intelligence: Understanding, Visualizing and Interpreting Deep Learning Models.” *ITU Journal*: ICT Discovery, vol. 1, 2018, pp. 39–48. arXiv.org, arxiv.org/abs/1708.08296.
+
+[23]	Simonyan, Karen, and Andrew Zisserman. “Very Deep Convolutional Networks for Large-Scale Image Recognition.” *ICLR*, 2015. arXiv.org, arxiv.org/abs/1409.1556.
+
+[24]	Statista. “Digital Market Outlook: Online Dating Users in the U.S. 2017-2024.” *Statista*, 18 Mar. 2020, www.statista.com/statistics/417654/us-online-dating-user-numbers.
+
+[25]	Szegedy, Christian, et al. “Going Deeper With Convolutions.” *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*, 2015, pp. 1–9. arXiv.org, arxiv.org/abs/1409.4842.
+
+[26]	“Tf.Keras.Applications.Vgg16.Preprocess_input.” *TensorFlow*, www.tensorflow.org/api_docs/python/tf/keras/applications/vgg16/preprocess_input.
+
+[27]	Tiffany, Kaitlyn. “The Tinder Algorithm, Explained.” *Vox*, 18 Mar. 2019, www.vox.com/2019/2/7/18210998/tinder-algorithm-swiping-tips-dating-app-science.
+
+[28]	Todorov, Alexander, et al. “Evaluating Faces on Trustworthiness After Minimal Time Exposure.” *Social Cognition*, vol. 27, no. 6, 2009, pp. 813–33. *Crossref*, doi:10.1521/soco.2009.27.6.813.
+
+[29]	Todorov, Alexander, and James S. Uleman. “Spontaneous Trait Inferences Are Bound to Actors’ Faces: Evidence from a False Recognition Paradigm.” *Journal of Personality and Social Psychology*, vol. 83, no. 5, 2002, pp. 1051–65. *Crossref*, doi:10.1037/0022-3514.83.5.1051.
+
+[30]	Venkatraman, Vinod, et al. “Predicting Advertising Success Beyond Traditional Measures: New Insights from Neurophysiological Methods and Market Response Modeling.” *SSRN Electronic Journal*, 2014. *Crossref*, doi:10.2139/ssrn.2498095.
+
+[31]	Vries, Harm de, and Jason Yosinksi. “Can Deep Learning Help You Find the Perfect Match?” *CoRR*, 2015. arXiv.org, arxiv.org/abs/1505.00359.
+
+[32]	Willis, Janine, and Alexander Todorov. “First Impressions.” *Psychological Science*, vol. 17, no. 7, 2006, pp. 592–98. *Crossref*, doi:10.1111/j.1467-9280.2006.01750.x.
+
+[33]	Zhang, Kaipeng, et al. “Joint Face Detection and Alignment Using Multitask Cascaded Convolutional Networks.” *IEEE Signal Processing Letters*, vol. 23, no. 10, 2016, pp. 1499–503. *Crossref*, doi:10.1109/lsp.2016.2603342.
