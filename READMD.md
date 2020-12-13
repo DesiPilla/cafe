@@ -75,3 +75,17 @@ Lastly, a large bias was introduced by the way training images were labeled. To 
 ## Friends dataset
 
 In addition to the 1,040 images scraped from Google Search, a second collection included a set of five images for each of 14 participants of the appropriate target group (18-25-year-old women). The images were not labeled by the author, but used as a subjective benchmark on real images, as well as to test for within-group variation in model predictions. In a practical environment, dating app-goers typically upload multiple images of themselves, but prospective matches can only give a single evaluation— “like” or “dislike”. While the user may find some photos more attractive than others, they ultimately must make a decision. This dataset can be used to determine how predictions vary for multiple images of the same person. All images were subject to the same data augmentation and preprocessing defined in Section 2.1.2.
+
+
+## Methodology
+Transfer learning is a very useful technique that allows us to train a deep learning model without requiring many training images. VGG16 is a very powerful and commonly used Convolutional Neural Network proposed by Simonyan and Zisserman [23]. The model architecture was trained on the ImageNet dataset (which contains over 14 million images of 1,000 objects) and achieved a top-5 accuracy of 92.7%. 
+
+However, we do not need to classify 1,000 objects; we only want to distinguish between *sip* (like) and *skip* (dislike). We can utilize the VGG16 model by removing the final three (dense) layers. The convolutional layers that are kept are already initialized with trained weights to detect features within an image. This will save a lot of computational time (and reduce the required number of training images), as we do not need to start from scratch. The bottleneck features at the end of VGG16 can then be fed into a fresh set of dense layers in a structure we specify.
+
+The training methodology follows popular techniques for transfer learning [2, 20]. There are two parts to model training: initialization and fine-tuning. In the initialization step, the weights of the pretrained VGG layers are frozen and not updated. The model is trained for a small number of epochs to generate *learned* values for the fresh layer weights as opposed to completely random values. In the fine-tuning step, the last set of the convolutional layers in the pretrained VGG network are unfrozen. This allows the model to home in on features that are more specific to our task. Fine-tuning is conducted over a longer period, with *early stopping* criteria defining how many epochs to use. During both steps, the optimizer used was SGD (*learning rate*=0.0001 and *momentum*=0.9). We chose to use a batch size of 32 for training, as smaller batch sizes have been found to boast better performances on the VGG16 network [11]. 
+
+Five distinct models were trained and compared, each with different architectures (see Table 2) for their fresh layers. All models included
+  * layer to flatten the final set of features from VGG
+  * at least one fully connected layer (with between 128 and 1096 neurons) using “ReLu” as the activation function
+  * dropout (with probability of 0.3 or 0.5)
+  * a fully connected layer at the end with 2 outputs and a “softmax” activation function  
